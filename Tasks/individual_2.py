@@ -28,7 +28,8 @@ class MyStudents:
                 "No",
                 "Ф.И.О.",
                 "Группа",
-                "Успеваемость"))
+                "Успеваемость")
+        )
         print(self.line)
         for pupil in undergraduates:
             evaluations = pupil.get('progress')
@@ -40,7 +41,9 @@ class MyStudents:
                             i,
                             pupil.get('name', ''),
                             pupil.get('group', ''),
-                            pupil.get('progress', 0)))
+                            pupil.get('progress', 0)
+                        )
+                    )
         print(self.line)
 
     def display(self, students):
@@ -90,7 +93,8 @@ def main(command_line=None):
     logging.basicConfig(
         filename='students.log',
         level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(funcName)s: %(lineno)d - %(message)s"
+        format="%(asctime)s - %(levelname)s - %(funcName)s: %(lineno)d \
+        - %(message)s"
     )
 
     line = '+-{}-+-{}-+-{}-+-{}-+'.format(
